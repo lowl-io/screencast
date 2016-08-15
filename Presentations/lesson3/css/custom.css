@@ -1,0 +1,44 @@
+/* Slide 3 */
+#slide3 {
+    margin-bottom: 150px;
+    overflow: hidden;
+}
+
+#topicSlide3 {
+    margin-bottom: 200px;
+}
+
+#wrapper div {
+    float: left;
+    font-size: 25px;
+}
+
+#first {
+   margin-left: 200px;
+}
+
+#third {
+    margin-left: 150px;
+}
+/* ---------------- */
+
+/* Slide 4 */
+#topicSlide4 {
+    margin-bottom: 130px;
+}
+
+#sample {
+    word-spacing: 65px;
+    margin-top: 190px;
+}
+/* ---------------- */
+
+/* Slide 5 */
+#topicSlide5 {
+    margin-bottom: 150px;
+}
+
+#const {
+    margin-bottom: 150px;
+}
+/* ---------------- */
