@@ -35,54 +35,53 @@
 						<div id="codefor">
 							<pre>
 								<code>
-				   for i := 1; i <= 10; i++ {
-				       fmt.Println(i)
-				   }
+			      for init-expr; cond-expr; inc-expr {
+			 	    statement
+			      }
 								</code>
 							</pre>
-						<div>
+						</div>
 					</div>
 				</section>
 
 				<section id="slide3">
 					<div id="topicSlide3">
-						Создание перменных
+						Оператор if
 					</div>
-					<div id="wrapper">
-						<div id="create-var">
-							<div id="second"> <code> x := "Hello World" </code> </div>
-							<div id="first"> <code> var x string = "Hello World" </code> </div>
-							<div id="third"> <code> var x = "Hello World" </code> </div>
-						</div>
+					<div id="codeif">
+						<pre>
+							<code>
+					if condition {
+					   // do some action
+					} else {
+					  // do some action
+					}
+							</code>
+						</pre>
 					</div>
 				</section>
 
 				<section id="slide4">
 					<div id="topicSlide4">
-						Как назвать перменную
+						Оператор switch
 					</div>
-					<div id="name-var">
-						<div id="text">
-						      Имена перменных в Go должны начинаться с буквы и могут содеражть <br>
-						      буквы, цифры и знак подчеркивания
-						</div>
-						<div id="sample">
-							<p> <code> myNameIs x_ y slide_4 qwerty123_ </code> </p>
-						</div>
+					<div id="codeswitch">
+						<pre>
+							<code>
+					switch expression {
+					case 1:
+					  // do some action 1
+					case 2:
+					  // do some action 2
+					case 3:
+					  // do some action 3
+					default:
+					 // if !expression, do default action
+					}
+							</code>
+						</pre>
 					</div>
 				</section>
-
-				<section id="slide5">
-					<div id="topicSlide5">
-						Константы
-					</div>
-					<div id="const">
-						Константа - это величина, чье значение не может быть изменено после инициализации <br>
-					</div>
-
-					<code> const x string = "Hello World" </code>
-				</section>
-
 				<section>
 					<p> Презентация и исходный код </p>
 					<p> <a href="https://github.com/lowl-io/screencast">github.com/lowl-io/screencast</a> </p>
