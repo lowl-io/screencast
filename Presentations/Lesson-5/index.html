@@ -1,0 +1,136 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/html">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/custom.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					Массивы, срезы, карты в Go
+				</section>
+
+				<section id="slide2">
+					<div id="topicSlide2">
+						Массивы
+					</div>
+					<div id="definition-array">
+						Массив — это нумерованная последовательность элементов одного типа, с фиксированной длинной.
+					</div>
+					<div>
+						<pre>
+							<code id="code-array">
+			    var x [5]int
+							</code>
+						</pre>
+					</div>
+				</section>
+
+				<section id="slide3">
+					<div id="topicSlide3">
+						Срезы
+					</div>
+					<div id="definition-slice">
+						Срез - это часть массива. Как и массивы срезы индексируются и имеют длину.
+						В отличии от массивов, их длину можно изменить.
+					</div>
+				</section>
+
+				<section id="slide4">
+					<div id="topicSlide4">
+						Создание среза
+					</div>
+					<div id="definition-slice-1">
+						Срезы всегда связаны с каким-нибудь массивом. Срез в Go создается встроенной функцией make
+					</div>
+					<div>
+						<pre>
+							<code id="code-slice">
+			 var x []float64
+
+			 x := make([]float64, 5, 10)
+							</code>
+						</pre>
+					</div>
+					<div id="definition-slice-2">
+						Другой способ создать срез — использовать выражение [low : high)
+					</div>
+					<div>
+						<pre>
+							<code id="code-slice-1">
+			 arr := [5]float64{1,2,3,4,5}
+
+		         x := arr[0:5]
+							</code>
+						</pre>
+					</div>
+				</section>
+
+				<section>
+					<div id="slide5">
+						<div id="topicSlide5">
+							Карта
+						</div>
+						<div id="definition-map">
+							Карта (ассоциативный массив, словарь) — это неупорядоченная коллекция пар вида ключ-значение <br>
+							Карта представляется в связке с ключевым словом map, следующим за ним типом ключа в скобках и типом значения после скобок.
+						</div>
+						<div>
+							<pre>
+								<code id="code-map">
+			 var x map[string]int
+								</code>
+							</pre>
+						</div>
+
+					</div>
+				</section>
+
+				<section>
+					<p> Презентация и исходный код </p>
+					<p> <a href="https://github.com/lowl-io/screencast">github.com/lowl-io/screencast</a> </p>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				width: 1366,
+				height: 768,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>

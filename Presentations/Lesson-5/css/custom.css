@@ -1,0 +1,72 @@
+/* Slide 2 */
+#slide2 {
+    margin-top: 35px;
+}
+
+#topicSlide2 {
+    margin-bottom: 75px;
+}
+
+#definition-array {
+    margin-top: 10px;
+    font-size: 30px;
+}
+
+#code-array {
+    font-size: 30px;
+}
+/* --------- */
+
+/* Slide 3 */
+#topicSlide3 {
+    margin-bottom: 75px;
+}
+
+#definition-slice {
+    margin-top: 10px;
+    font-size: 30px;
+}
+/* --------- */
+
+/* Slide 4 */
+#topicSlide4 {
+    margin-bottom: 75px;
+}
+
+#definition-slice-1 {
+    margin-top: 10px;
+    font-size: 30px;
+}
+
+#definition-slice-2 {
+    margin-top: 10px;
+    font-size: 30px;
+}
+
+#code-slice {
+    font-size: 30px;
+}
+
+#code-slice-1 {
+    font-size: 30px;
+}
+/* --------- */
+
+/* Slide 5 */
+#slide5 {
+    margin-top: 40px;
+}
+
+#topicSlide5 {
+    margin-bottom: 75px;
+}
+
+#definition-map {
+    margin-top: 10px;
+    font-size: 30px;
+}
+
+#code-map {
+    font-size: 30px;
+}
+/* --------- */
