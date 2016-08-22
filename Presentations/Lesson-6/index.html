@@ -1,0 +1,197 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/html">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/custom.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					Функции в Go
+				</section>
+
+				<section id="slide2">
+					<div id="topicSlide2">
+						Функции
+					</div>
+					<div id="definition-func">
+						Функция — фрагмент программного кода, к которому можно обратиться из другого места программы.
+					</div>
+				</section>
+
+				<section id="slide3">
+					<div id="topicSlide3">
+						Синтаксис
+					</div>
+					<div id="definition-slice">
+						<p> Функции создаются при помощи ключевого слова func. </p>
+						func Название(принимаемый переменные) (возвращаемые переменные)
+						<pre>
+							<code id="code-func">
+		  func human(name, surname string, age int) (string, string) {
+
+			  // do some action
+
+		  }
+							</code>
+						</pre>
+					</div>
+				</section>
+
+				<section id="slide4">
+					<div id="topicSlide4">
+						Возврат нескольких значений
+					</div>
+					<div>
+						<pre>
+							<code id="code-return">
+		      func f() (int, int) {
+
+			   return 5, 6
+
+		      }
+
+
+		      func main() {
+
+			  x, y := f()
+
+		      }
+							</code>
+						</pre>
+					</div>
+				</section>
+
+				<section>
+					<div id="slide5">
+						<div id="topicSlide5">
+							Переменное число аргументов функции
+						</div>
+						<div id="definition-var">
+							Использование ... перед типом последнего аргумента означает, что функция может содержать ноль и более таких параметров. В нашем случае мы берем ноль и более int.
+						</div>
+						<div>
+							<pre>
+								<code id="code-var">
+				func add (args ...int) int {
+				    total := 0
+
+				    for _, v := range xs {
+					   total += v
+				    }
+				    return total
+				}
+
+				func main() {
+
+				    fmt.Println(add(1,2,3))
+				}
+								</code>
+							</pre>
+						</div>
+				</div>
+				</section>
+
+				<section>
+				<div id="slide6">
+					<div id="topicSlide6">
+						Замыкания
+					</div>
+					<div id="definition-closure">
+						Замыкание(если очень просто) - это возможность создавать функции внутри функциий
+					</div>
+
+					<div>
+						<pre>
+							<code id="code-closure">
+				func main() {
+				  x := 0
+				  inc := func() int {
+				      x++
+					  return x
+				  }
+
+				  fmt.Println(inc()) // 1
+				  fmt.Println(inc()) // 2
+				}
+							</code>
+						</pre>
+					</div>
+				</div>
+				</section>
+
+				<section>
+					<div id="slide7">
+						<div id="topicSlide7">
+							Рекурсия
+						</div>
+						<div id="definition-recur">
+							Рекурсия - это когда функция вызывает сама себя
+						</div>
+						<div>
+							<pre>
+								<code id="code-recurs">
+			  func fact(x uint) uint {
+
+			  	  if x == 0 {
+
+				    return 1
+									
+				  }
+
+				  return x * fact(x-1)
+			  }
+								</code>
+							</pre>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<p> Презентация и исходный код </p>
+					<p> <a href="https://github.com/lowl-io/screencast">github.com/lowl-io/screencast</a> </p>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				width: 1366,
+				height: 768,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>

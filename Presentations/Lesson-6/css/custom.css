@@ -1,0 +1,96 @@
+/* Slide 2 */
+#slide2 {
+    margin-top: 35px;
+}
+
+#topicSlide2 {
+    margin-bottom: 75px;
+}
+
+#definition-func {
+    margin-top: 10px;
+    font-size: 30px;
+}
+
+#code-func {
+    font-size: 23px;
+}
+/* --------- */
+
+/* Slide 3 */
+#topicSlide3 {
+    margin-bottom: 75px;
+}
+
+#definition-slice {
+    margin-top: 10px;
+    font-size: 30px;
+}
+/* --------- */
+
+/* Slide 4 */
+#topicSlide4 {
+    margin-bottom: 75px;
+}
+
+#code-return {
+    font-size: 30px;
+}
+/* --------- */
+
+/* Slide 5 */
+#slide5 {
+    margin-top: 40px;
+}
+
+#topicSlide5 {
+    margin-bottom: 75px;
+}
+
+#definition-var {
+    margin-top: 10px;
+    font-size: 30px;
+}
+
+#code-var {
+    font-size: 20px;
+}
+/* --------- */
+
+/* Slide 6 */
+#slide6 {
+    margin-top: 40px;
+}
+
+#topicSlide6 {
+    margin-bottom: 75px;
+}
+
+#definition-closure {
+    margin-top: 10px;
+    font-size: 30px;
+}
+
+#code-closure {
+    font-size: 25px;
+}
+/* --------- */
+
+/* Slide 7 */
+#slide7 {
+    margin-top: 40px;
+}
+
+#topicSlide7 {
+    margin-bottom: 75px;
+}
+
+#definition-recur {
+    margin-top: 10px;
+    font-size: 30px;
+}
+
+#code-recurs{
+    font-size: 25px;
+}
+/* --------- */
