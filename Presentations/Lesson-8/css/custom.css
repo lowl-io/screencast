@@ -1,0 +1,89 @@
+/* Slide 2 */
+#slide2 {
+    /*margin-top: 35px;*/
+}
+
+#topicSlide2 {
+    margin-bottom: 75px;
+}
+
+#definition-struct {
+    margin-top: 10px;
+    font-size: 30px;
+}
+
+#code-struct {
+    font-size: 25px;
+    overflow: hidden;
+
+}
+/* --------- */
+
+/* Slide 3 */
+#topicSlide3 {
+    margin-bottom: 75px;
+}
+
+#init {
+    font-size: 30px;
+    overflow: hidden;
+}
+/* --------- */
+
+/* Slide 4 */
+#topicSlide4 {
+    margin-bottom: 75px;
+}
+
+#code-new {
+    font-size: 25px;
+    overflow: hidden;
+}
+
+#code-fields {
+    font-size: 30px;
+}
+
+#text {
+    font-size: 26px;
+}
+/* --------- */
+
+/* Slide 5 */
+#topicSlide5 {
+    margin-bottom: 75px;
+}
+
+#code-method {
+    font-size: 25px;
+    overflow: hidden;
+}
+
+#text-1 {
+    font-size: 26px;
+}
+
+#code-method-1 {
+    font-size: 25px;
+    overflow: hidden;
+}
+
+#text-2 {
+    font-size: 26px;
+}
+/* --------- */
+
+/* Slide 6 */
+#topicSlide6 {
+    margin-bottom: 75px;
+}
+
+#code-interface {
+    font-size: 25px;
+    overflow: hidden;
+}
+
+#text-3 {
+    font-size: 26px;
+}
+/* --------- */
