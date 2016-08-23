@@ -1,0 +1,57 @@
+/* Slide 2 */
+#slide2 {
+    /*margin-top: 35px;*/
+}
+
+#topicSlide2 {
+    margin-bottom: 75px;
+}
+
+#definition-pointer {
+    margin-top: 10px;
+    font-size: 30px;
+}
+
+#code-func {
+    font-size: 23px;
+}
+/* --------- */
+
+/* Slide 3 */
+#topicSlide3 {
+    margin-bottom: 75px;
+}
+
+#box div {
+    width: 650px;
+}
+
+#left {
+    float: left;
+}
+
+#left-pointer {
+    font-size: 20px;
+    overflow: hidden;
+}
+
+#right {
+    float: right;
+}
+
+#right-pointer {
+    font-size: 20px;
+    overflow: hidden;
+}
+/* --------- */
+
+/* Slide 4 */
+#topicSlide4 {
+    margin-bottom: 75px;
+}
+
+#code-new {
+    font-size: 25px;
+    overflow: hidden;
+}
+/* --------- */
