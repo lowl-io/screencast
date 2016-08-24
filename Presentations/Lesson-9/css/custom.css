@@ -1,0 +1,111 @@
+/* Slide 2 */
+#topicSlide2 {
+    margin-bottom: 75px;
+}
+
+#definition-strem{
+    margin-top: 10px;
+    font-size: 30px;
+}
+/* --------- */
+
+/* Slide 3 */
+#topicSlide3 {
+    margin-bottom: 75px;
+}
+
+#definition-goroutine {
+    margin-top: 10px;
+    font-size: 30px;
+}
+
+#code-goroutine {
+    font-size: 25px;
+    overflow: hidden;
+}
+/* --------- */
+
+/* Slide 4 */
+#topicSlide4 {
+    margin-bottom: 75px;
+}
+
+#definition-chan {
+    margin-top: 10px;
+    font-size: 30px;
+}
+
+#code-new {
+    font-size: 25px;
+    overflow: hidden;
+}
+
+#code-fields {
+    font-size: 30px;
+}
+
+#text {
+    font-size: 26px;
+}
+/* --------- */
+
+/* Slide 5 */
+#topicSlide5 {
+    margin-bottom: 75px;
+}
+
+#code-chan-1 {
+    font-size: 25px;
+    overflow: hidden;
+}
+
+#code-chan-2 {
+    font-size: 25px;
+    overflow: hidden;
+}
+
+#text-1 {
+    font-size: 27px;
+}
+
+#text-2 {
+    font-size: 27px;
+}
+/* --------- */
+
+/* Slide 6 */
+#topicSlide6 {
+    margin-bottom: 75px;
+}
+
+#definition-chan-buf {
+    margin-top: 10px;
+    font-size: 30px;
+}
+
+#code-chan-buf {
+    font-size: 25px;
+    overflow: hidden;
+}
+
+#text-3 {
+    font-size: 26px;
+}
+/* --------- */
+
+/* Slide 7 */
+#topicSlide7 {
+    margin-bottom: 75px;
+}
+
+#definition-select {
+    margin-top: 10px;
+    font-size: 30px;
+}
+
+#code-select {
+    font-size: 20px;
+    overflow: hidden;
+}
+
+/* --------- */

@@ -1,0 +1,208 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/html">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/custom.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					Многопоточность в Go
+				</section>
+
+				<section id="slide2">
+					<div id="topicSlide2">
+						Многопоточность
+					</div>
+					<div id="definition-strem">
+						Многопоточность - это одновременное выполнение более чем одной задачи <br>
+						Для реализации многопоточности в Go есть такие инструменты, как горутины и каналы
+					</div>
+				</section>
+
+				<section id="slide3">
+					<div id="topicSlide3">
+						Горутины
+					</div>
+					<div id="definition-goroutine">
+						Горутина — это функция, которая может работать параллельно с другими функциями <br>
+						Для создания горутины используется ключевое слово go, за которым следует вызов функции
+					</div>
+					<div>
+						<pre>
+							<code id="code-goroutine">
+				package main
+
+				import "fmt"
+
+				func f(n int) {
+				    for i := 0; i < 10; i++ {
+				        fmt.Println(n, ":", i)
+				    }
+				}
+
+				func main() {
+				    go f(0)
+				    var input string
+				    fmt.Scanln(&input)
+				}
+							</code>
+						</pre>
+					</div>
+
+				</section>
+
+				<section id="slide4">
+					<div id="topicSlide4">
+						Каналы
+					</div>
+					<div id="definition-chan">
+						Каналы обеспечивают возможность общения нескольких горутин друг с другом,
+						чтобы синхронизировать их выполнение
+					</div>
+					<div>
+						<pre>
+							<code id="code-chan">
+			func main() {
+			    messages := make(chan string)
+
+			    go func() { messages <- "ping" }()
+
+			    msg := <-messages
+			    fmt.Println(msg)
+			}
+
+							</code>
+						</pre>
+					</div>
+				</section>
+
+				<section id="slide5">
+					<div id="topicSlide5">
+						Направление каналов
+					</div>
+					<div>
+						<span id="text-1">
+							Мы можем задать направление передачи сообщений в канале, <br>
+							сделав его только отправляющим или принимающим.
+						</span>
+						<pre>
+							<code id="code-chan-1">
+			  func pinger(c chan<- string)
+							</code>
+						</pre>
+						<span id="text-2">
+							Канал c будет только отправлять сообщение. <br>
+							Попытка получить сообщение из канала c вызовет ошибку компилирования.
+						</span>
+						<pre>
+							<code id="code-chan-2">
+			  func pinger(c <-chan string)
+							</code>
+						</pre>
+					</div>
+				</section>
+
+				<section id="slide6">
+					<div id="topicSlide6">
+						Буферизированный канал
+					</div>
+					<div id="definition-chan-buf">
+						Буферизированный канал принимает ограниченное количество значений
+					</div>
+					<div>
+						<pre>
+							<code id="code-chan-buf">
+			    func main() {
+
+				 messages := make(chan string, 2)
+
+				 messages <- "buffered"
+				 messages <- "channel"
+
+				 fmt.Println(<-messages)
+				 fmt.Println(<-messages)
+
+				}
+							</code>
+						</pre>
+					</div>
+				</section>
+
+				<section id="slide7">
+					<div id="topicSlide7">
+						Оператор select
+					</div>
+					<div id="definition-select">
+						Оператор select работает как switch, но для каналов
+					</div>
+					<div id="code">
+						<pre>
+							<code id="code-select">
+				func main() {
+				    c1 := make(chan string)
+				    c2 := make(chan string)
+				    go func() { time.Sleep(time.Second * 1) c1 <- "one" }()
+				    go func() { time.Sleep(time.Second * 2) c2 <- "two" }()
+				    for i := 0; i < 2; i++ {
+				        select {
+				        case msg1 := <-c1:
+				            fmt.Println("received", msg1)
+				        case msg2 := <-c2:
+				            fmt.Println("received", msg2)
+				        }
+				    }
+				}
+						</code>
+						</pre>
+					</div>
+				</section>
+
+				<section>
+					<p> Презентация и исходный код </p>
+					<p> <a href="https://github.com/lowl-io/screencast">github.com/lowl-io/screencast</a> </p>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				width: 1366,
+				height: 768,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
