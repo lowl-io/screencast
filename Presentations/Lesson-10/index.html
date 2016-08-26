@@ -1,0 +1,87 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/html">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/custom.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					Пакеты в Go
+				</section>
+
+				<section id="slide2">
+					<div id="topicSlide2">
+						Пакеты и повторное использование кода
+					</div>
+					<div id="definition-package">
+						Пакеты - это еще одни механизм повторного использования кода <br>
+						Почти любая программа, которую мы видили, включает эту строчку
+						<pre>
+							<code id="code-import">
+				   import "fmt"
+							</code>
+						</pre>
+						fmt - это имя пакета, включающего множество функциий, связанных с форматированием строк и выводом на экран
+					</div>
+				</section>
+
+				<section id="slide3">
+					<div id="topicSlide3">
+						Преимущества использования пакетов
+					</div>
+					<div id="plus-package">
+						<p> Снижение вероятности дублирование имён функций, <br> что позволяет именам быть простыми и краткими </p> <br>
+						<p> Организация кода для упрощения поиска повторно используемых конструкций </p> <br>
+						<p> Ускорение компиляции, так как мы должны перекомпилировать только части программы </p>
+					</div>
+				</section>
+
+				<section>
+					<p> Презентация и исходный код </p>
+					<p> <a href="https://github.com/lowl-io/screencast">github.com/lowl-io/screencast</a> </p>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				width: 1366,
+				height: 768,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,27 @@
+/* Slide 2 */
+#topicSlide2 {
+    margin-bottom: 75px;
+}
+
+#definition-package {
+    margin-top: 10px;
+    font-size: 25px;
+}
+
+#code-import {
+    overflow: hidden;
+    font-size: 25px;
+}
+
+/* --------- */
+
+/* Slide 3 */
+#topicSlide3 {
+    margin-bottom: 75px;
+}
+
+#plus-package {
+    margin-top: 10px;
+    font-size: 30px;
+}
+/* --------- */
