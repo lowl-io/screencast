@@ -38,9 +38,14 @@
     margin-bottom: 150px;
 }
 
+pre #code-string {
+    white-space: normal;
+}
+
 #code-string {
     font-size: 30px;
     overflow: hidden;
+    text-align: center;
 }
 
 #const {
