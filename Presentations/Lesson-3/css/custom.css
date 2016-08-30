@@ -38,7 +38,11 @@
     margin-bottom: 150px;
 }
 
+#code-string {
+    font-size: 30px;
+}
+
 #const {
-    margin-bottom: 150px;
+    margin-bottom: 130px;
 }
 /* ---------------- */
