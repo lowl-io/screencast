@@ -9,12 +9,20 @@
 
 #definition-array {
     margin-top: 10px;
+    padding-bottom: 35px;
     font-size: 30px;
+}
+
+pre #code-array {
+    white-space: normal;
 }
 
 #code-array {
     font-size: 30px;
+    overflow: hidden;
+    text-align: center;
 }
+
 /* --------- */
 
 /* Slide 3 */
@@ -26,6 +34,7 @@
     margin-top: 10px;
     font-size: 30px;
 }
+
 /* --------- */
 
 /* Slide 4 */
@@ -43,13 +52,24 @@
     font-size: 30px;
 }
 
+pre #code-slice #code-slice-1 {
+    white-space: normal;
+}
+
 #code-slice {
     font-size: 30px;
+    overflow: hidden;
+    text-align: center;
+    padding-right: 500px;
 }
 
 #code-slice-1 {
     font-size: 30px;
+    overflow: hidden;
+    text-align: center;
+    padding-right: 600px;
 }
+
 /* --------- */
 
 /* Slide 5 */
@@ -66,7 +86,13 @@
     font-size: 30px;
 }
 
+pre #code-map {
+    white-space: normal;
+}
+
 #code-map {
     font-size: 30px;
+    text-align: center;
+    overflow: hidden;
 }
 /* --------- */
