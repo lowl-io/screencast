@@ -52,7 +52,7 @@ pre #code-array {
     font-size: 30px;
 }
 
-pre #code-slice #code-slice-1 {
+pre #code-slice, #code-slice-1, #code-slice-2, #code-slice-3 {
     white-space: normal;
 }
 
@@ -60,16 +60,25 @@ pre #code-slice #code-slice-1 {
     font-size: 30px;
     overflow: hidden;
     text-align: center;
-    padding-right: 500px;
 }
 
 #code-slice-1 {
     font-size: 30px;
     overflow: hidden;
     text-align: center;
-    padding-right: 600px;
 }
 
+#code-slice-2 {
+    font-size: 30px;
+    overflow: hidden;
+    text-align: center;
+}
+
+#code-slice-3 {
+    font-size: 30px;
+    overflow: hidden;
+    text-align: center;
+}
 /* --------- */
 
 /* Slide 5 */
