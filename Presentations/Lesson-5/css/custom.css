@@ -105,3 +105,24 @@ pre #code-map {
     overflow: hidden;
 }
 /* --------- */
+
+/* Slide 6 */
+#slide6 {
+    margin-top: 40px;
+}
+
+#topicSlide6 {
+    margin-bottom: 75px;
+}
+
+#text, #text1 {
+    font-size: 27px;
+}
+
+#map pre {
+    text-align: center;
+    overflow: hidden;
+    font-size: 25px;
+}
+
+/* --------- */
