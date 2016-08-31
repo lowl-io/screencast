@@ -21,7 +21,7 @@
 
 /* Slide 3 */
 #topicSlide3 {
-    padding-bottom: 65px;
+    padding-bottom: 45px;
 }
 
 #code-if code {
@@ -44,8 +44,12 @@
 /* -------- */
 
 /* Slide 4 */
+#slide4 {
+    margin-top: 35px;
+}
+
 #topicSlide4 {
-    padding-bottom: 65px;
+    padding-bottom: 35px;
 }
 
 #code-switch code {
