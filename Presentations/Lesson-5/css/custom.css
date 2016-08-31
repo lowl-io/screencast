@@ -30,8 +30,15 @@ pre #code-array {
     margin-bottom: 75px;
 }
 
+#code-slice {
+    font-size: 30px;
+    overflow: hidden;
+    text-align: center;
+}
+
 #definition-slice {
     margin-top: 10px;
+    padding-bottom: 50px;
     font-size: 30px;
 }
 
@@ -54,12 +61,6 @@ pre #code-array {
 
 pre #code-slice, #code-slice-1, #code-slice-2, #code-slice-3 {
     white-space: normal;
-}
-
-#code-slice {
-    font-size: 30px;
-    overflow: hidden;
-    text-align: center;
 }
 
 #code-slice-1 {
