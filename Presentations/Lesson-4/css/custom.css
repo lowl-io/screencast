@@ -1,0 +1,67 @@
+/* Slide 2 */
+#topicSlide2 {
+    padding-bottom: 65px;
+}
+
+#code-for code {
+    text-align: center;
+    font-size: 30px;
+    overflow: hidden;
+}
+
+#statement {
+    padding-right: 160px;
+}
+
+#braces-for {
+    padding-right: 455px;
+}
+/* -------- */
+
+
+/* Slide 3 */
+#topicSlide3 {
+    padding-bottom: 65px;
+}
+
+#code-if code {
+    text-align: center;
+    font-size: 30px;
+    overflow: hidden;
+}
+
+#action, #action1 {
+    padding-left: 160px;
+}
+
+#else {
+    padding-right: 110px;
+}
+
+#braces-else {
+    padding-right: 240px;
+}
+/* -------- */
+
+/* Slide 4 */
+#topicSlide4 {
+    padding-bottom: 65px;
+}
+
+#code-switch code {
+    text-align: center;
+    font-size: 25px;
+    overflow: hidden;
+}
+
+#case1, #case2, #case3 {
+    padding-left: 330px;
+}
+
+#default {
+    padding-left: 350px;
+}
+
+#braces-switch {
+    padding-right: 240px;
+}
