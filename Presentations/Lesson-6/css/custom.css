@@ -107,13 +107,53 @@
 /* --------- */
 
 /* Slide 6 */
+#slide6 {
+    margin-top: 40px;
+}
+
 #topicSlide6 {
-    padding-bottom: 75px;
+    margin-bottom: 75px;
 }
 
 #definition-closure {
-    font-size: 35px;
+    margin-top: 10px;
+    padding-bottom: 20px;
+    font-size: 30px;
 }
+
+#code-closure code {
+    overflow: hidden;
+    text-align: center;
+}
+
+#var-closure {
+    padding-left: 40px;
+}
+
+#func-closure {
+    padding-left: 200px;
+}
+
+#var-closure-1 {
+    padding-left: 180px;
+}
+
+#return-closure {
+    padding-left: 240px;
+}
+
+#braces-closure {
+    padding-right: 20px;
+}
+
+#print-c-1, #print-c-2 {
+    padding-left: 260px;
+}
+
+#braces-c {
+    padding-right: 135px;
+}
+
 /* --------- */
 
 /* Slide 7 */
