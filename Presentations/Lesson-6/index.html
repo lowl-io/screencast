@@ -103,20 +103,9 @@
 						Замыкание
 					</div>
 					<div id="definition-closure">
-						Замыкание(если очень просто) - это возможность создавать функции внутри функциий
-					</div>
-					<div>
-						<pre id="code-closure">
-							<code id="main-closure"> func main() { </code>
-							<code id="var-closure"> x := 0 </code>
-							<code id="func-closure"> inc := func() int { </code>
-							<code id="var-closure-1"> x++ </code>
-							<code id="return-closure"> return x </code>
-							<code id="braces-closure"> } </code>
-							<code id="print-c-1"> fmt.Println(inc()) // 1 </code>
-							<code id="print-c-2"> fmt.Println(inc()) // 2 </code>
-							<code id="braces-c"> } </code>
-						</pre>
+						Замыкание - это функция вместе с сопутствующим окружением <br>
+						Замыкание возникает только тогда, когда функция, содержащая свободные перменные, объединяется
+						с окружением, которое предоставляет привязки для всех свободных перменных.
 					</div>
 				</div>
 				</section>
