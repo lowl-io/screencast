@@ -1,8 +1,4 @@
 /* Slide 2 */
-#slide2 {
-    margin-top: 35px;
-}
-
 #topicSlide2 {
     margin-bottom: 75px;
 }
@@ -23,8 +19,22 @@
 }
 
 #definition-slice {
-    margin-top: 10px;
+    padding-bottom: 50px;
     font-size: 30px;
+}
+
+#code-func code {
+    overflow: hidden;
+    text-align: center;
+    font-size: 25px;
+}
+
+#act {
+    padding-right: 500px;
+}
+
+#braces-f {
+    padding-right: 900px;
 }
 /* --------- */
 
@@ -33,27 +43,66 @@
     margin-bottom: 75px;
 }
 
-#code-return {
-    font-size: 30px;
+#code-return code {
+    overflow: hidden;
+    font-size: 25px;
+    text-align: center;
+}
+
+#main {
+    padding-right: 130px;
+}
+
+#braces, #braces-1 {
+    padding-right: 300px;
 }
 /* --------- */
 
 /* Slide 5 */
 #slide5 {
-    margin-top: 40px;
+    margin-top: 30px;
 }
 
 #topicSlide5 {
-    margin-bottom: 75px;
+    margin-bottom: 35px;
 }
 
 #definition-var {
     margin-top: 10px;
-    font-size: 30px;
+    font-size: 28px;
 }
 
-#code-var {
-    font-size: 20px;
+#code-args code {
+    overflow: hidden;
+    text-align: center;
+}
+
+#total {
+    padding-right: 105px;
+}
+
+#braces-args {
+    padding-right: 210px;
+}
+
+#return-total {
+    padding-right: 65px;
+}
+
+#braces-args-1, #braces-args-2 {
+    padding-right: 325px;
+}
+
+#for {
+    padding-left: 75px;
+}
+
+#main-args {
+    padding-right: 175px;
+}
+
+#print {
+    padding-left: 90px;
 }
 /* --------- */
 
@@ -68,12 +117,43 @@
 
 #definition-closure {
     margin-top: 10px;
+    padding-bottom: 20px;
     font-size: 30px;
 }
 
-#code-closure {
-    font-size: 25px;
+#code-closure code {
+    overflow: hidden;
+    text-align: center;
 }
+
+#var-closure {
+    padding-left: 40px;
+}
+
+#func-closure {
+    padding-left: 200px;
+}
+
+#var-closure-1 {
+    padding-left: 180px;
+}
+
+#return-closure {
+    padding-left: 240px;
+}
+
+#braces-closure {
+    padding-right: 20px;
+}
+
+#print-c-1, #print-c-2 {
+    padding-left: 260px;
+}
+
+#braces-c {
+    padding-right: 135px;
+}
+
 /* --------- */
 
 /* Slide 7 */
@@ -87,10 +167,29 @@
 
 #definition-recur {
     margin-top: 10px;
+    padding-bottom: 20px;
     font-size: 30px;
 }
 
-#code-recurs{
-    font-size: 25px;
+#code-recursion code {
+    overflow: hidden;
+    text-align: center;
 }
+
+#if-rec {
+    padding-right: 43px;
+}
+
+#braces-rec {
+    padding-right: 150px;
+}
+
+#return-rec-1 {
+    padding-left: 100px;
+}
+
+#braces-rec-1 {
+    padding-right: 290px;
+}
+
 /* --------- */

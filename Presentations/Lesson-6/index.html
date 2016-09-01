@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title> Go? Golang </title>
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/black.css">
@@ -34,7 +34,8 @@
 						Функции
 					</div>
 					<div id="definition-func">
-						Функция — фрагмент программного кода, к которому можно обратиться из другого места программы.
+						Функция — фрагмент программного кода, к которому можно обратиться из другого места программы <br>
+						Функция является независимой частью кода, связывающая один или несколько входных параметров с одним или несколькими выходными параметрами
 					</div>
 				</section>
 
@@ -45,14 +46,12 @@
 					<div id="definition-slice">
 						<p> Функции создаются при помощи ключевого слова func. </p>
 						func Название(принимаемый переменные) (возвращаемые переменные)
-						<pre>
-							<code id="code-func">
-		  func human(name, surname string, age int) (string, string) {
-
-			  // do some action
-
-		  }
-							</code>
+					</div>
+					<div>
+						<pre id="code-func">
+							<code id="func"> func human(name, surname string, age int) (string, string) { </code>
+							<code id="act"> // do some action </code>
+							<code id="braces-f"> } </code>
 						</pre>
 					</div>
 				</section>
@@ -62,21 +61,13 @@
 						Возврат нескольких значений
 					</div>
 					<div>
-						<pre>
-							<code id="code-return">
-		      func f() (int, int) {
-
-			   return 5, 6
-
-		      }
-
-
-		      func main() {
-
-			  x, y := f()
-
-		      }
-							</code>
+						<pre id="code-return">
+							<code id="return"> func f() (int, int) { </code>
+							<code id="return-num"> return 5, 6 </code>
+							<code id="braces"> } </code>
+							<code id="main"> func main() { </code>
+						    <code id="var"> x, y := f() </code>
+							<code id="braces-1"> } </code>
 						</pre>
 					</div>
 				</section>
@@ -87,28 +78,24 @@
 							Переменное число аргументов функции
 						</div>
 						<div id="definition-var">
-							Использование ... перед типом последнего аргумента означает, что функция может содержать ноль и более таких параметров. В нашем случае мы берем ноль и более int.
+							Использование ... перед типом последнего аргумента означает, что функция может содержать ноль и более таких параметров.
+							В нашем случае мы берем ноль и более int.
 						</div>
 						<div>
-							<pre>
-								<code id="code-var">
-				func add (args ...int) int {
-				    total := 0
-
-				    for _, v := range xs {
-					   total += v
-				    }
-				    return total
-				}
-
-				func main() {
-
-				    fmt.Println(add(1,2,3))
-				}
-								</code>
+							<pre id="code-args">
+								<code id="add-args"> func add (args ...int) int { </code>
+								<code id="total"> total := 0 </code>
+								<code id="for"> for _, v := range args { </code>
+								<code id="total-1"> total += v </code>
+								<code id="braces-args"> } </code>
+								<code id="return-total"> return total </code>
+								<code id="braces-args-1"> } </code>
+								<code id="main-args"> func main() { </code>
+								<code id="print"> fmt.Println(add(1,2,3)) </code>
+								<code id="braces-args-2"> } </code>
 							</pre>
 						</div>
-				</div>
+				    </div>
 				</section>
 
 				<section>
@@ -119,21 +106,17 @@
 					<div id="definition-closure">
 						Замыкание(если очень просто) - это возможность создавать функции внутри функциий
 					</div>
-
 					<div>
-						<pre>
-							<code id="code-closure">
-				func main() {
-				  x := 0
-				  inc := func() int {
-				      x++
-					  return x
-				  }
-
-				  fmt.Println(inc()) // 1
-				  fmt.Println(inc()) // 2
-				}
-							</code>
+						<pre id="code-closure">
+							<code id="main-closure"> func main() { </code>
+							<code id="var-closure"> x := 0 </code>
+							<code id="func-closure"> inc := func() int { </code>
+							<code id="var-closure-1"> x++ </code>
+							<code id="return-closure"> return x </code>
+							<code id="braces-closure"> } </code>
+							<code id="print-c-1"> fmt.Println(inc()) // 1 </code>
+							<code id="print-c-2"> fmt.Println(inc()) // 2 </code>
+							<code id="braces-c"> } </code>
 						</pre>
 					</div>
 				</div>
@@ -148,19 +131,13 @@
 							Рекурсия - это когда функция вызывает сама себя
 						</div>
 						<div>
-							<pre>
-								<code id="code-recurs">
-			  func fact(x uint) uint {
-
-			  	  if x == 0 {
-
-				    return 1
-									
-				  }
-
-				  return x * fact(x-1)
-			  }
-								</code>
+							<pre id="code-recursion">
+								<code id="recursion"> func fact(x uint) uint { </code>
+								<code id="if-rec"> if x == 0 { </code>
+								<code id="return-rec"> return 1 </code>
+								<code id="braces-rec"> } </code>
+								<code id="return-rec-1"> return x * fact(x-1) </code>
+								<code id="braces-rec-1"> } </code>
 							</pre>
 						</div>
 					</div>
@@ -168,7 +145,7 @@
 
 				<section>
 					<p> Презентация и исходный код </p>
-					<p> <a href="https://github.com/lowl-io/screencast">github.com/lowl-io/screencast</a> </p>
+					<p> <a href="https://github.com/lowl-io/screencast"> github.com/lowl-io/screencast </a> </p>
 				</section>
 			</div>
 		</div>
