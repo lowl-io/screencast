@@ -22,6 +22,15 @@
     margin-bottom: 75px;
 }
 
+#left-pointer, #right-pointer {
+    line-height: 0.5em;
+}
+
+#box code {
+    overflow: hidden;
+    text-align: center;
+}
+
 #box div {
     width: 650px;
 }
@@ -30,28 +39,78 @@
     float: left;
 }
 
-#left-pointer {
-    font-size: 20px;
-    overflow: hidden;
+#braces-p, #braces-p-1 {
+    padding-right: 220px;
+}
+
+#main-p {
+    padding-right: 73px;
+}
+
+#func-p {
+    padding-left: 12px;
+}
+
+#print-p {
+    padding-left: 210px;
 }
 
 #right {
     float: right;
 }
 
-#right-pointer {
-    font-size: 20px;
-    overflow: hidden;
+#main-p-1 {
+    padding-right: 115px;
+}
+
+#braces-p-2, #braces-p-3 {
+    padding-right: 270px;
+}
+
+#func-p-1 {
+    padding-left: 30px;
+}
+
+#print-p-1 {
+    padding-left: 215px;
 }
 /* --------- */
 
 /* Slide 4 */
 #topicSlide4 {
-    margin-bottom: 75px;
+    margin-bottom: 50px;
 }
 
 #code-new {
-    font-size: 25px;
+    line-height: 0.6em;
+}
+
+#code-new code {
     overflow: hidden;
+    text-align: center;
+}
+
+#func-m-new, #var-new {
+    padding-right: 25px;
+}
+
+#braces-new, #braces-m-new {
+    padding-right: 250px;
+}
+
+#main-new {
+    padding-right: 100px;
+}
+
+#var-m-new {
+    padding-left: 70px;
+}
+
+#print-new {
+    padding-left: 210px;
+}
+
+#definition-new {
+    font-size: 28px;
 }
 /* --------- */

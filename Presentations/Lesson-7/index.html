@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title> Go? Golang </title>
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/black.css">
@@ -34,7 +34,7 @@
 						Указатель
 					</div>
 					<div id="definition-pointer">
-						Указатель – переменная, значением которой является адрес ячейки памяти.
+						Указатель – переменная, значением которой является адрес ячейки памяти
 					</div>
 				</section>
 
@@ -44,33 +44,27 @@
 					</div>
 					<div id="box">
 						<div id="left">
-							<pre>
-								<code id="left-pointer">
-		func zero(x int) {
-		    x = 0
-		}
-
-		func main() {
-		    x := 5
-		    zero(x)
-		    fmt.Println(x) // x = 5
-		}
-								</code>
+							<pre id="left-pointer">
+								<code id="pointer"> func zero(x int) { </code>
+								<code id="var-p"> x = 0 </code>
+								<code id="braces-p"> } </code>
+								<code id="main-p"> func main() { </code>
+								<code id="var-m-p"> x := 5 </code>
+								<code id="func-p"> zero(x) </code>
+								<code id="print-p"> fmt.Println(x) // x = 5 </code>
+								<code id="braces-p-1"> } </code>
 							</pre>
 						</div>
 						<div id="right">
-							<pre>
-								<code id="right-pointer">
-	func zero(xPtr *int) {
-	    *xPtr = 0
-	}
-
-	func main() {
-	    x := 5
-	    zero(&x)
-	    fmt.Println(x) // x = 0
-	}
-								</code>
+							<pre id="right-pointer">
+								<code id="pointer-1"> func zero(xPtr *int) { </code>
+								<code id="var-p-1"> *xPtr = 0 </code>
+								<code id="braces-p-2"> } </code>
+								<code id="main-p-1"> func main() { </code>
+								<code id="var-m-p-1"> x := 5 </code>
+								<code id="func-p-1"> zero(&x) </code>
+								<code id="print-p-1"> fmt.Println(x) // x = 0 </code>
+								<code id="braces-p-3"> } </code>
 							</pre>
 						</div>
 					</div>
@@ -81,18 +75,15 @@
 						Оператор New
 					</div>
 					<div>
-						<pre>
-							<code id="code-new">
-				func one(xPtr *int) {
-				    *xPtr = 1
-				}
-
-				func main() {
-				    xPtr := new(int)
-				    one(xPtr)
-				    fmt.Println(*xPtr) // x = 1
-				}
-							</code>
+						<pre id="code-new">
+							<code id="new-op"> func one(xPtr *int) { </code>
+							<code id="var-new"> *xPtr = 1 </code>
+							<code id="braces-new"> } </code>
+							<code id="main-new"> func main() { </code>
+							<code id="var-m-new"> xPtr := new(int) </code>
+							<code id="func-m-new"> one(xPtr) </code>
+							<code id="print-new"> fmt.Println(*xPtr) // x = 1 </code>
+							<code id="braces-m-new"> } </code>
 						</pre>
 					</div>
 					<div id="definition-new">
@@ -102,7 +93,7 @@
 
 				<section>
 					<p> Презентация и исходный код </p>
-					<p> <a href="https://github.com/lowl-io/screencast">github.com/lowl-io/screencast</a> </p>
+					<p> <a href="https://github.com/lowl-io/screencast"> github.com/lowl-io/screencast </a> </p>
 				</section>
 			</div>
 		</div>
