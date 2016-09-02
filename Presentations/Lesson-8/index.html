@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title> Go? Golang </title>
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/black.css">
@@ -34,19 +34,15 @@
 						Структуры
 					</div>
 					<div id="definition-struct">
-						Структура — это тип, содержащий именованные поля.
+						Структура — это тип, содержащий именованные поля
 					</div>
 					<div>
-						<pre>
-							<code id="code-struct">
-				type Circle struct {
-
-				    x float64
-				    y float64
-				    r float64
-
-				}
-							</code>
+						<pre id="code-struct">
+							<code id="struct"> type Circle struct { </code>
+							<code id="var-1"> x float64 </code>
+							<code id="var-2"> y float64 </code>
+							<code id="var-3"> r float64 </code>
+							<code id="braces-s"> } </code>
 						</pre>
 					</div>
 				</section>
@@ -56,16 +52,10 @@
 						Инициализация
 					</div>
 					<div>
-						<pre>
-							<code id="init">
-		   1. var circle Circle
-
-
-		   2. circle := new(Circle)
-
-
-		   3. circle := Circle{x: 0, y: 0, r: 5}
-							</code>
+						<pre id="code-init">
+							<code id="init1"> 1. var circle Circle </code>
+							<code id="init2"> 2. circle := new(Circle) </code>
+							<code id="init3"> 3. circle := Circle{x: 0, y: 0, r: 5} </code>
 						</pre>
 					</div>
 				</section>
@@ -75,17 +65,13 @@
 						Поля
 					</div>
 					<div>
-						<span id="text"> Получить доступ к полям можно с помощью оператора . (точка) </span>
-						<pre>
-							<code id="code-fields">
-			    circle.x = 10
-
-
-			    circle.y = 4
-
-
-			    circle.r = 3
-							</code>
+						<div id="text">
+							Получить доступ к полям можно с помощью оператора . (точка)
+						</div>
+						<pre id="code-fields">
+							<code id="fields1"> circle.x = 10 </code>
+							<code id="fields2"> circle.y = 4 </code>
+							<code id="fields3"> circle.r = 3 </code>
 						</pre>
 					</div>
 				</section>
@@ -95,26 +81,20 @@
 						Методы
 					</div>
 					<div>
-						<span id="text-1">
+						<div id="text-1">
 							Между ключевым словом func и именем функции мы добавили «получателя» <br>
 							Получатель похож на параметр — у него есть имя и тип
-						</span>
-						<pre>
-							<code id="code-method">
-			func (circle *Circle) area() float64 {
-
-				return math.Pi * circle.r * circle.r
-
-			}
-							</code>
+						</div>
+						<pre id="code-method">
+							<code id="method"> func (circle *Circle) area() float64 { </code>
+							<code id="return-m"> return math.Pi * circle.r * circle.r </code>
+							<code id="braces-m"> } </code>
 						</pre>
-						<span id="text-2">
+						<div id="text-2">
 							Объявление функции таким способом позволяет нам вызывать функцию с помощью оператора . (точка)
-						</span>
-						<pre>
-							<code id="code-method-1">
-			    fmt.Println(circle.area())
-							</code>
+						</div>
+						<pre id="code-method-1">
+							<code id="print-m"> fmt.Println(circle.area()) </code>
 						</pre>
 					</div>
 				</section>
@@ -124,27 +104,22 @@
 						Интерфейсы
 					</div>
 					<div>
-						<span id="text-3">
+						<div id="text-3">
 							Интерфейс - это способ реализации полиморфизма <br>
 							Полиморфизм - это способность функции обрабатывать данные разных типов.
-						</span>
-						<pre>
-							<code id="code-interface">
-			    type geometry interface {
-
-			        area() float64
-			        perimeter() float64
-
-			    }
-							</code>
+						</div>
+						<pre id="code-interface">
+							<code id="interface"> type geometry interface { </code>
+							<code id="area"> area() float64 </code>
+							<code id="perim"> perimeter() float64 </code>
+							<code id="braces-i"> } </code>
 						</pre>
 					</div>
-
 				</section>
 
 				<section>
 					<p> Презентация и исходный код </p>
-					<p> <a href="https://github.com/lowl-io/screencast">github.com/lowl-io/screencast</a> </p>
+					<p> <a href="https://github.com/lowl-io/screencast"> github.com/lowl-io/screencast </a> </p>
 				</section>
 			</div>
 		</div>

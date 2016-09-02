@@ -1,6 +1,6 @@
 /* Slide 2 */
 #slide2 {
-    /*margin-top: 35px;*/
+    margin-top: 35px;
 }
 
 #topicSlide2 {
@@ -8,15 +8,24 @@
 }
 
 #definition-struct {
-    margin-top: 10px;
+    padding-bottom: 20px;
     font-size: 30px;
 }
 
-#code-struct {
-    font-size: 25px;
+#code-struct code {
     overflow: hidden;
-
+    font-size: 25px;
+    text-align: center;
 }
+
+#code-struct {
+    line-height: 0.7em;
+}
+
+#braces-s {
+    padding-right: 265px;
+}
+
 /* --------- */
 
 /* Slide 3 */
@@ -24,29 +33,38 @@
     margin-bottom: 75px;
 }
 
-#init {
-    font-size: 30px;
+#code-init code {
     overflow: hidden;
+    text-align: center;
+    font-size: 30px;
 }
+
+#init2 {
+    padding-left: 78px;
+}
+
+#init3 {
+    padding-left: 315px;
+}
+
 /* --------- */
 
 /* Slide 4 */
 #topicSlide4 {
-    margin-bottom: 75px;
+    margin-bottom: 65px;
 }
 
-#code-new {
-    font-size: 25px;
+#code-fields code {
     overflow: hidden;
-}
-
-#code-fields {
+    text-align: center;
     font-size: 30px;
 }
 
 #text {
-    font-size: 26px;
+    font-size: 25px;
+    margin-bottom: 20px;
 }
+
 /* --------- */
 
 /* Slide 5 */
@@ -57,6 +75,30 @@
 #code-method {
     font-size: 25px;
     overflow: hidden;
+}
+
+#code-method code {
+    overflow: hidden;
+    text-align: center;
+    font-size: 25px;
+}
+
+#return-m {
+    padding-left: 140px;
+}
+
+#braces-m {
+    padding-right: 550px;
+}
+
+#code-method-1 code {
+    overflow: hidden;
+    text-align: center;
+    font-size: 25px;
+}
+
+#code-method {
+    line-height: 0.7em;
 }
 
 #text-1 {
@@ -71,6 +113,7 @@
 #text-2 {
     font-size: 26px;
 }
+
 /* --------- */
 
 /* Slide 6 */
@@ -78,12 +121,27 @@
     margin-bottom: 75px;
 }
 
-#code-interface {
-    font-size: 25px;
+#code-interface code {
     overflow: hidden;
+    text-align: center;
+    font-size: 25px;
+}
+
+#code-interface {
+    line-height: 0.9em;
+}
+
+#perim {
+    padding-left: 75px;
+}
+
+#braces-i {
+    padding-right: 350px;
 }
 
 #text-3 {
     font-size: 26px;
+    padding-bottom: 30px;
 }
+
 /* --------- */
