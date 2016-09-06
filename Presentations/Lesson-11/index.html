@@ -26,33 +26,136 @@
 		<div class="reveal">
 			<div class="slides">
 				<section>
-					Тестирование в Go
+					Многопоточность в Go
 				</section>
 
 				<section id="slide2">
 					<div id="topicSlide2">
-						Тестирование
+						Многопоточность
 					</div>
-					<div id="definition-test">
-						Язык Go имеет поддержку автоматического тестирования пакетов. Протестироват пакет можно
-						при помощи команды go test.
-						Данная команда запустит функцию, которая имееет следующий вид
+					<div id="definition-stream">
+						Многопоточность - это одновременное выполнение более чем одной задачи <br>
+						Для реализации многопоточности в Go есть такие инструменты, как горутины и каналы
 					</div>
-						<pre id="test-f">
-							<code id="test"> func TestXxx(*testing.T) </code>
+				</section>
+
+				<section id="slide3">
+					<div id="topicSlide3">
+						Горутины
+					</div>
+					<div id="definition-goroutine">
+						Горутина — это функция, которая может работать параллельно с другими функциями <br>
+						Для создания горутины используется ключевое слово go, за которым следует вызов функции
+					</div>
+					<div>
+						<pre id="code-goroutine">
+							<code id="go-func"> func f(n int) { </code>
+							<code id="go-for"> for i := 0; i < 10; i++ { </code>
+							<code id="go-print"> fmt.Println(n, ":", i) </code>
+							<code id="go-braces"> } </code>
+							<code id="go-braces-1"> } </code>
+							<code id="go-main"> func main() { </code>
+							<code id="go-f"> go f(0) </code>
+							<code id="go-var"> var input string </code>
+							<code id="go-scan"> fmt.Scanln(&input) </code>
+							<code id="go-braces-2"> } </code>
 						</pre>
-					<div id="definition-test1">
-						где Xxx - это любая буквенно-цифровая строка. (Test - не может быть изменено)
 					</div>
-					<div id="text">
-						Для того чтобы написать новый тест, нужно создать файл с окончанием _test.go, который содержит функцию
-						TestXxx, как было рассмотрено выше.
+
+				</section>
+
+				<section id="slide4">
+					<div id="topicSlide4">
+						Каналы
+					</div>
+					<div id="definition-chan">
+						Каналы обеспечивают возможность общения нескольких горутин друг с другом,
+						чтобы синхронизировать их выполнение
+					</div>
+					<div>
+						<pre id="code-chan">
+							<code id="chan"> func main() { </code>
+							<code id="msg"> messages := make(chan string) </code>
+							<code id="chan-f"> go func() { messages <- "ping" }() </code>
+							<code id="chan-msg"> msg := <-messages </code>
+							<code id="chan-print"> fmt.Println(msg) </code>
+							<code id="chan-braces"> } </code>
+						</pre>
+					</div>
+				</section>
+
+				<section id="slide5">
+					<div id="topicSlide5">
+						Направление каналов
+					</div>
+					<div>
+						<span id="text-1">
+							Мы можем задать направление передачи сообщений в канале, <br>
+							сделав его только отправляющим или принимающим.
+						</span>
+						<pre id="code-chan-1">
+							<code id="chan-1"> func pinger(c chan<- string) </code>
+						</pre>
+						<span id="text-2">
+							Канал c будет только отправлять сообщение. <br>
+							Попытка получить сообщение из канала c вызовет ошибку компилирования.
+						</span>
+						<pre id="code-chan-2">
+							<code id="chan-2"> func pinger(c <-chan string) </code>
+						</pre>
+					</div>
+				</section>
+
+				<section id="slide6">
+					<div id="topicSlide6">
+						Буферизированный канал
+					</div>
+					<div id="definition-chan-buf">
+						Буферизированный канал принимает ограниченное количество значений
+					</div>
+					<div>
+						<pre id="code-buf">
+							<code id="buf"> func main() { </code>
+							<code id="msg-buf"> messages := make(chan string, 2) </code>
+							<code id="msg-buf-1"> messages <- "buffered" </code>
+							<code id="msg-buf-2"> messages <- "channel" </code>
+							<code id="buf-print"> fmt.Println(<-messages) </code>
+							<code id="buf-print-1"> fmt.Println(<-messages) </code>
+							<code id="buf-braces"> } </code>
+						</pre>
+					</div>
+				</section>
+
+				<section id="slide7">
+					<div id="topicSlide7">
+						Оператор select
+					</div>
+					<div id="definition-select">
+						Оператор select работает как switch, но для каналов
+					</div>
+					<div id="code">
+						<pre id="code-select">
+							<code id="select"> func main() { </code>
+							<code id="c1"> c1 := make(chan string) </code>
+							<code id="c2"> c2 := make(chan string) </code>
+							<code id="go-sel"> go func() { time.Sleep(time.Second * 1) c1 <- "one" }() </code>
+							<code id="go-sel-1"> go func() { time.Sleep(time.Second * 2) c2 <- "two" }() </code>
+							<code id="for-sel"> for i := 0; i < 2; i++ { </code>
+							<code id="sel"> select { </code>
+							<code id="case1"> case msg1 := <-c1: </code>
+							<code id="case-print"> fmt.Println("received", msg1) </code>
+							<code id="case2"> case msg2 := <-c2: </code>
+							<code id="case-print-2"> fmt.Println("received", msg2) </code>
+							<code id="braces-sel"> } </code>
+							<code id="braces-sel-1"> } </code>
+							<code id="braces-sel-2"> } </code>
+						</pre>
 					</div>
 				</section>
 
 				<section>
 					<p> Презентация и исходный код </p>
-					<p> <a href="https://github.com/lowl-io/screencast"> github.com/lowl-io/screencast </a> </p>
+					<p> <a href="https://github.com/lowl-io/screencast">github.com/lowl-io/screencast</a> </p>
 				</section>
 			</div>
 		</div>

@@ -3,47 +3,23 @@
     margin-bottom: 75px;
 }
 
-#definition-package {
-    padding-bottom: 50px;
+#definition-test {
     font-size: 25px;
 }
 
-#code-import code {
+#definition-test1 {
+    font-size: 25px;
+    margin-bottom: 60px;
+}
+
+#test-f code {
     overflow: hidden;
     font-size: 28px;
     text-align: center;
+    padding-top: 30px;
 }
 
 #text {
     font-size: 25px;
-}
-/* --------- */
-
-/* Slide 3 */
-#topicSlide3 {
-    margin-bottom: 75px;
-}
-
-#plus-package p {
-    font-size: 28px;
-}
-/* --------- */
-
-
-/* Slide 4 */
-#topicSlide4 {
-    margin-bottom: 55px;
-}
-#text-1 {
-    text-align: center;
-}
-
-#func {
-    padding-left: 300px;
-}
-
-#plus-package {
-    margin-top: 10px;
-    font-size: 30px;
 }
 /* --------- */
