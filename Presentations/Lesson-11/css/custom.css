@@ -195,10 +195,7 @@
 
 #code-select {
     line-height: 0.55em;
-}
-
-#code {
-    margin-right: 150px;
+    margin-right: 200px;
 }
 
 #code-select code {
