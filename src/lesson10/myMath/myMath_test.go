@@ -5,7 +5,6 @@ import (
 	"testing"
 )
 
-
 // Тестирование функции Add(a, b)
 func TestAdd(t *testing.T) {
 	a := 4
