@@ -9,42 +9,54 @@
 /* ---------------- */
 
 /* Slide 3 */
-#slide3 {
-    margin-top: 90px;
-}
-
 #topicSlide3 {
-    margin-bottom: 110px;
+    margin-bottom: 150px;
 }
 
-#integer {
+#int {
     float: left;
-    margin-left: 150px;
+    text-align: left;
+    font-size: 27px;
+    word-spacing: 5px;
 }
 
-#inttypes {
-    word-spacing: 15px;
-}
-
-#real {
+#uint {
     float: right;
-    margin-right: 150px;
-
+    text-align: left;
+    font-size: 27px;
+    word-spacing: 5px;
 }
 /* ---------------- */
 
 /* Slide 4 */
+#topicSlide4 {
+    margin-bottom: 150px;
+}
+
+#float32 {
+    float: left;
+    text-align: left;
+}
+
+#float64 {
+    float: right;
+    text-align: left;
+}
+/* Slide 5 */
+#topicSlide5 {
+    margin-bottom: 120px;
+}
 #operations {
     margin-bottom: 130px;
 }
+
 #tableOperations {
     /*margin-bottom: 200px;*/
 }
-
 /* ---------------- */
 
-/* Slide 5 */
-#topicSlide5 {
+/* Slide 6 */
+#topicSlide6 {
     margin-bottom: 200px;
 }
 
@@ -57,11 +69,10 @@
     margin-left: 150px;
     margin-bottom: 250px;
 }
-
 /* ---------------- */
 
-/* Slide 6 */
-#topicSlide6 {
+/* Slide 7 */
+#topicSlide7 {
     margin-bottom: 200px;
 }
 
@@ -74,11 +85,10 @@
     float: right;
     margin-right: 150px;
 }
-
 /* ---------------- */
 
-/* Slide 7 */
-#topicSlide7 {
+/* Slide 8 */
+#topicSlide8 {
     margin-bottom: 200px;
 }
 
@@ -91,5 +101,3 @@
     margin-left: 150px;
     margin-bottom: 250px;
 }
-
-/* ---------------- */
